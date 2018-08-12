@@ -1,0 +1,76 @@
+body {
+    color: #222222;
+    background: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.starter-template .content .lead .font-normal {
+    color: #000;
+}
+
+.starter-template .content .lead,
+.starter-template .content h1 .smaller {
+    color: #89d8d4;
+}
+
+.starter-template .links ul li a, a {
+    color: #89d8d4;
+    text-decoration: none;
+}
+
+.starter-template .links ul li:hover a, a:hover {
+    text-decoration: underline;
+}
+
+.starter-template .links ul li .icon-muted {
+    color: #89d8d4;
+}
+
+.starter-template .copyright {
+    color: #666;
+}
+
+.starter-template {
+    margin-top: 0px;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #287a76;
+    color: white;
+}
+
+.navbar-inverse {
+    background-color: #89d8d4;
+    border-color: #63b2ae;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: #4ab1ad;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    text-decoration: underline;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #eee;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.starter-template .content {
+    margin-left: 0px;
+}
