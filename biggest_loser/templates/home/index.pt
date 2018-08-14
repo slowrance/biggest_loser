@@ -6,9 +6,9 @@
                 <h1>Biggest Loser Home Page</h1>
             </div>
             <div class="bl-stats">
-                <div class="stat">${len(users)} competitors</div>
-                <div class="stat">0 competing for money</div>
-                <div class="stat">$0 prize pool</div>
+                <div class="stat">${user_count} competitors</div>
+                <div class="stat">${cash_players} competing for money</div>
+                <div class="stat">$${prize_pool} prize pool</div>
             </div>
             <div class="container">
                 <div class="row">
