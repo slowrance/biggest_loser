@@ -40,6 +40,39 @@ body {
     color: #27514d;
 }
 
+.leader-board tr {
+    /*display: inline-block;*/
+    min-width: 200px;
+    padding: 3px 20px;
+    border: 2px solid #4c4c4c;
+    background-color: #dfdfdf;
+    text-align: center;
+}
+
+.leader-board td, .leader-board th {
+    padding: 3px 20px;
+    border: 1px solid #4c4c4c;
+}
+
+/*.user .percent-lost {*/
+/*!*display: inline-block;*!*/
+/*min-width: 200px;*/
+/*padding: 0 20px;*/
+/*border: 2px solid #4c4c4c;*/
+/*background-color: #dfdfdf;*/
+/*text-align: center;*/
+/*font-weight: bold;*/
+/*}*/
+
+.user .percent-lost.lost {
+    color: green;
+}
+
+.user .percent-lost.gained {
+    color: red;
+}
+
+
 #last_nav_link {
     margin-right: 45px;
 }

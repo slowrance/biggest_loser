@@ -1,4 +1,3 @@
-import datetime
 import sqlalchemy as sa
 import sqlalchemy.orm as orm
 from biggest_loser.data.modelbase import SqlAlchemyBase
