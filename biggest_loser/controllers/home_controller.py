@@ -9,8 +9,8 @@ def home_index(request):
     users = season_user_service.get_users()
     for u in users:
         start_weight = u.weights[0].weight
-        current_weight = u.weights[1].weight
-        u.percent = f'{((start_weight - current_weight) / start_weight):.2f}%'
+        current_weight = u.weights[-1].weight
+        u.percent = f'{((start_weight - current_weight) / start_weight):.2%}'
 
     return {'users': users,
             'user_count': season_user_service.user_count(),
