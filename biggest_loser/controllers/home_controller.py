@@ -2,16 +2,17 @@ from pyramid.view import view_config
 from biggest_loser.services import season_user_service
 
 
-def get_test_users():
-    return[
-        {'codename': "Cryin' Calories", 'percent': .034},
-        {'codename': "Water Horse", 'percent': .021},
-        {'codename': "Moosin' Around", 'percent': -.012},
-    ]
+
 
 @view_config(route_name='home', renderer="biggest_loser:templates/home/index.pt")
 def home_index(request):
-    return {'users': get_test_users(),
+    users = season_user_service.get_users()
+    for u in users:
+        start_weight = u.weights[0].weight
+        current_weight = u.weights[1].weight
+        u.percent = f'{((start_weight - current_weight) / start_weight):.2f}%'
+
+    return {'users': users,
             'user_count': season_user_service.user_count(),
             'cash_players': season_user_service.cash_count(),
             'prize_pool': season_user_service.prize_pool()}

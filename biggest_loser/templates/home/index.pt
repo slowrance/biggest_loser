@@ -15,7 +15,7 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-6">
                         <div class="user" tal:repeat="u users">
-                            <div class="username">${u.codename}</div>
+                            <div class="username">${u.code_name}</div>
                             <div class="percent-lost">${u.percent}</div>
                         </div>
                     </div>

@@ -18,5 +18,5 @@ class User(SqlAlchemyBase):
     profile_img_url = sa.Column(sa.String)
     last_login = sa.Column(sa.DateTime, default=datetime.datetime.now, index=True)
 
-    weights = orm.relation('Weight', back_populates='user')
+    weights = orm.relation('Weight', order_by=Weight.date, back_populates='user')
     seasons = orm.relation('SeasonUser', back_populates='user')
