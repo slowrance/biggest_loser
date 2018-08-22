@@ -40,6 +40,13 @@ body {
     color: #27514d;
 }
 
+.leader-board {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .leader-board tr {
     /*display: inline-block;*/
     min-width: 200px;
@@ -52,17 +59,16 @@ body {
 .leader-board td, .leader-board th {
     padding: 3px 20px;
     border: 1px solid #4c4c4c;
+    text-align: center;
 }
 
-/*.user .percent-lost {*/
-/*!*display: inline-block;*!*/
-/*min-width: 200px;*/
-/*padding: 0 20px;*/
-/*border: 2px solid #4c4c4c;*/
-/*background-color: #dfdfdf;*/
-/*text-align: center;*/
-/*font-weight: bold;*/
-/*}*/
+.user .percent-lost {
+    min-width: 200px;
+    padding: 0 20px;
+
+    text-align: center;
+    font-weight: bold;
+}
 
 .user .percent-lost.lost {
     color: green;
@@ -84,4 +90,12 @@ footer {
     color: white;
     background-color: #287a76;
     text-align: center;
+}
+
+.error-msg {
+    color: #9b0000;
+}
+
+.navbar-brand img {
+    width: 45px;
 }

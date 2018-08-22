@@ -9,12 +9,13 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'passlib',
     'pyramid',
 	'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'sqlalchemy',
     'waitress',
-    ]
+]
 
 tests_require = [
     'WebTest >= 1.3.1',  # py3 compat

@@ -1,4 +1,7 @@
 from typing import List
+
+from sqlalchemy.orm import joinedload
+
 from biggest_loser import DbSession
 from biggest_loser.data.season_users import SeasonUser
 from biggest_loser.data.seasons import Season
@@ -31,7 +34,10 @@ def get_current_season_id():
 def get_users(season: Season = get_current_season_id()) -> List[User]:
     session = DbSession.factory()
     users = []
-    result = session.query(SeasonUser).filter(SeasonUser.season_id == season).all()
+    result = session.query(SeasonUser).options(
+        joinedload(SeasonUser.user)
+            .joinedload(User.weights)
+    ).filter(SeasonUser.season_id == season).all()
     for season_user in result:
         users.append(season_user.user)
     return users

@@ -9,6 +9,7 @@ from biggest_loser.data.modelbase import SqlAlchemyBase
 class User(SqlAlchemyBase):
     __tablename__ = 'users'
 
+    id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     code_name = sa.Column(sa.String, primary_key=True)
     fname = sa.Column(sa.String)
     lname = sa.Column(sa.String)

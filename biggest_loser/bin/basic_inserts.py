@@ -9,6 +9,7 @@ from biggest_loser.data.season_users import SeasonUser
 from biggest_loser.data.seasons import Season
 from biggest_loser.data.users import User
 from biggest_loser.data.weights import Weight
+from biggest_loser.services.user_service import hash_text
 
 
 def main():
@@ -49,6 +50,7 @@ def insert_users(seasons: List[Season]):
     u1.fname = 'Steve'
     u1.lname = 'Lowrance'
     u1.email = 'steve.lowrance@gmail.com'
+    u1.hashed_password = hash_text('test')
     for s in seasons:
         su = SeasonUser()
         su.season = s
@@ -62,6 +64,7 @@ def insert_users(seasons: List[Season]):
     u2.fname = 'Tara'
     u2.lname = 'Moore'
     u2.email = 'mooretd@gmail.com'
+    u2.hashed_password = hash_text('test')
     for s in seasons:
         su = SeasonUser()
         su.season = s

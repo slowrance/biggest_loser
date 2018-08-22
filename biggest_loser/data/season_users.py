@@ -8,7 +8,7 @@ class SeasonUser(SqlAlchemyBase):
 
     id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
 
-    user_id = sa.Column(sa.String, sa.ForeignKey('users.code_name'), index=True)
+    user_id = sa.Column(sa.String, sa.ForeignKey('users.id'), index=True)
     user = orm.relation('User', back_populates='seasons')
 
     season_id = sa.Column(sa.Integer, sa.ForeignKey('seasons.id'), index=True)

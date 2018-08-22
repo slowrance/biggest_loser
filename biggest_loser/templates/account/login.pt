@@ -2,8 +2,20 @@
     <div metal:fill-slot="content">
 
         <div class="content">
-            <h1>LOGIN</h1>
+            <form action="" method="POST" class="account-form">
+                <h1>LOGIN</h1>
+                <input name="email" type="text" placeholder=" Your email address" class="form-control" value="${email}">
+                <input name="password" type="password" placeholder=" Password" class="form-control" value="${password}">
+                <button type="submit" class="btn btn-success">Login</button>
+                <div class="error-msg" tal:condition="error">
+                        ${error}
+                </div>
+
+            </form>
         </div>
 
+    </div>
+    <div metal:fill-slot="additional-css">
+        <link rel="stylesheet" href="${request.static_url('biggest_loser:static/css/account.css')}">
     </div>
 </div>

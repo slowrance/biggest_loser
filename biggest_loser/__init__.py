@@ -23,9 +23,11 @@ def init_routing(config):
     # home controller
     config.add_route('home', '/')
     config.add_route('about', '/about')
+    config.add_route('about/', '/about/')
 
     # account controller
     config.add_route('account_home', '/account')
+    config.add_route('account_home/', '/account/')
     config.add_route('login', '/account/login')
     config.add_route('register', '/account/register')
     config.add_route('logout', '/account/logout')
